@@ -1,0 +1,31 @@
+= A journey to Microservice
+Hantsy Bai <hantsy@gmail.com>
+
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+
+
+
+
+include::README.adoc[Introduction]
+
+include::an-introduction-to-microservice.adoc[An introduction to Microservice]
+
+include::getting-started.adoc[Getting started]
+
+include::wires-up-microservices-with-spring-cloud.adoc[Wires up Microservices with Spring Cloud]
+
+include::microservice-orchestration.adoc[Microservice orchestration]
+
+include::event-driven-architecture.adoc[Event driven architecture]
+
+include::testing-microservices.adoc[Testing microservices]
+
+include::devops-continuous-deliver-automation.adoc[DevOps: Continuous deliver automation]
+
+include::fandq-are-you-ready-for-microservice.adoc[F&Q: Are you ready for microservice]
+
