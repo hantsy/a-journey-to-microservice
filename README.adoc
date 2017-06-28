@@ -1,25 +1,26 @@
 
 == Introduction
 
-In this minibook, I will share the lessions I have learned in these years for building distrubuted appliations using Microservice architecture.
+In this minibook, I will share the lessons I have learned in these years for building distrubuted appliations using Microservice architecture.
 
 It will cover the following topics:
 
-* Advantage and trade-off of Microservice
-* Build a simple Microservice POC
-* Service Orchestration Stretagy
-* Testing Microservices
-* Applying DevOps and deliver freqently
+* Advantage and trade-off of Microservice Architecture
+* Build a simple Microservice POC from scratch
+* Service Orchestration strategy
+* How to test very parts in a Microservice Architecture based application
+* Apply the DevOps principle and deliver your work more freqently
+* The considerations you have to take account in when adopting Microservice
 
 === Sample codes
 
-All soucrce codes used this book will be open sourced on Github. 
+All soucrce codes used in this book will be open sourced under my Github account. 
 
-https://github.com/hantsy[https://github.com/hantsy]
+https://github.com/hantsy[https://github.com/hantsy[https://github.com/hantsy[https://github.com/hantsy]
 
 
 === Contribution
 
-If you find any errors of this book, please file an issue on the repository of this book. 
+This is an open book, I am eager to know how you think about the content of this book. If you find any errors, or you have some idea about the content, do not hesitate to file an issue on the repository of this book. 
 
-* 
+* [Issue tracking](https://github.com/hantsy/a-journey-to-microservice/issues)

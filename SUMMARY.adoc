@@ -21,9 +21,11 @@ include::wires-up-microservices-with-spring-cloud.adoc[Wires up Microservices wi
 
 include::microservice-orchestration.adoc[Microservice orchestration]
 
-include::event-driven-architecture.adoc[Event driven architecture]
+include::eventual-consistency.adoc[Eventual Consistency]
 
 include::testing-microservices.adoc[Testing microservices]
+
+include::logging-analysis-and-metrics.adoc[Logging Analysis and Metrics]
 
 include::devops-continuous-deliver-automation.adoc[DevOps: Continuous deliver automation]
 

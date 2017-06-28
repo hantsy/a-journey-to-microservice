@@ -1,0 +1,44 @@
+
+== Secure Microservices
+
+
+Generate a RAS keypair. 
+
+----
+keytool -genkeypair -alias mytestkey -keyalg RSA \
+-dname "CN=Hantsy Labs,OU=Hantsy Labs,O=Hantsy Labs,L=ShangHai,S=ShangHai,C=CN" \
+-keypass mykeypass -keystore server.jks -storepass mystorepass
+----
+
+Print the public key through the following command line. 
+
+---
+$  keytool -list -rfc --keystore server.jks | openssl x509 -inform pem -pubkey
+Enter keystore password:  mystorepass
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6B4yV0n48uT1YTwDq+ghVDBDk17eoy65+tTBItcPIHnyFnR6mkIILmJ5SAvxzV9Jy/mq0wqh0OEQCo2azPgZXojGQvF2+6Hlc8lvt4X44PpQUC6JA9z8uFpwCWRya8DDUxXpaGFm/5TUuWlZZCmMv6b1+s5AyBk5SBADzZx+knipXJFPO3klmhjRbIN7Vb+yuPku/1rVSoyMzFeZW911x5tjQ4bz10H+KEmSkhtB+nCjo1yLNCfBFFbqjWdhCm9vmwXfPnLGiVgpexbqafMaTnCbFzbXj16p/CumpHOny089IAKM1OpBdX2keI4sYgOa5+IUj0448VJbZekVXpjMXwIDAQAB
+-----END PUBLIC KEY-----
+-----BEGIN CERTIFICATE-----
+MIIDiTCCAnGgAwIBAgIEL5J3ajANBgkqhkiG9w0BAQsFADB1MQswCQYDVQQGEwJD
+TjERMA8GA1UECBMIU2hhbmdIYWkxETAPBgNVBAcTCFNoYW5nSGFpMRQwEgYDVQQK
+EwtIYW50c3kgTGFiczEUMBIGA1UECxMLSGFudHN5IExhYnMxFDASBgNVBAMTC0hh
+bnRzeSBMYWJzMB4XDTE3MDYyMjE1MjcxOVoXDTE3MDkyMDE1MjcxOVowdTELMAkG
+A1UEBhMCQ04xETAPBgNVBAgTCFNoYW5nSGFpMREwDwYDVQQHEwhTaGFuZ0hhaTEU
+MBIGA1UEChMLSGFudHN5IExhYnMxFDASBgNVBAsTC0hhbnRzeSBMYWJzMRQwEgYD
+VQQDEwtIYW50c3kgTGFiczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+AOgeMldJ+PLk9WE8A6voIVQwQ5Ne3qMuufrUwSLXDyB58hZ0eppCCC5ieUgL8c1f
+Scv5qtMKodDhEAqNmsz4GV6IxkLxdvuh5XPJb7eF+OD6UFAuiQPc/LhacAlkcmvA
+w1MV6WhhZv+U1LlpWWQpjL+m9frOQMgZOUgQA82cfpJ4qVyRTzt5JZoY0WyDe1W/
+srj5Lv9a1UqMjMxXmVvddcebY0OG89dB/ihJkpIbQfpwo6NcizQnwRRW6o1nYQpv
+b5sF3z5yxolYKXsW6mnzGk5wmxc2149eqfwrpqRzp8tPPSACjNTqQXV9pHiOLGID
+mufiFI9OOPFSW2XpFV6YzF8CAwEAAaMhMB8wHQYDVR0OBBYEFNg/VgA/fEt8Vtn/
+KiEdbfbqFyPfMA0GCSqGSIb3DQEBCwUAA4IBAQDI2e3n4s76FUM1fYZpp+iWKXVE
+Hmxa/Vua+qpkTezJNO4xkavbsrGeE5ntL6kc5xmk4akyJZBouVsCy5tJK6VO4sKA
+uxR0iuNejMoPrFlcmlRENeY3JKX9UKk3szMcFYO4eDA3VELqsB3ZyzeBSmTW3KTN
+fN/50ClBJBCS7mYNzEGQqW+8AyATH75PHrr7CRv13EsqVzT8wtyFU6i0erTQSrpm
+7cOIk0rmHye+UUPQkzkbByet+UIvaQ/tUx/XPEhkDe9WT/NX/T/oOOIVx/RGIk50
+9KVeok54bp1UZEGb4L9okg842ArPr6RsVm9DRsDnqeMBHStTg5S7LrmRMn7b
+-----END CERTIFICATE-----
+---
+
+Copy the public key part to your application.yml files of all resources.
